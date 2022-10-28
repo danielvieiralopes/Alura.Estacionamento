@@ -103,5 +103,7 @@ namespace Alura.Estacionamento.Testes
             //Assert
             Assert.Equal(alterado.Cor, veiculoAlterado.Cor);
         }
+
+
     }
 }

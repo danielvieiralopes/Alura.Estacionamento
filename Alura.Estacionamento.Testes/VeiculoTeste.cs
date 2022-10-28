@@ -58,7 +58,23 @@ namespace Alura.Estacionamento.Testes
 
         }
 
+        [Fact]
+        public void DadosVeiculo()
+        {
+            //Arrange
+            var carro = new Veiculo();
+            carro.Proprietario = "Jose alves";
+            carro.Tipo = TipoVeiculo.Automovel;
+            carro.Placa = "FGA-2314";
+            carro.Cor = "Vermelho";
+            carro.Modelo = "Ferrari";
 
+            //Act
+            string dados = carro.ToString();
+
+            //Assert
+            Assert.Contains("Ficha do Veículo:", dados);
+        }
 
     }
 }
