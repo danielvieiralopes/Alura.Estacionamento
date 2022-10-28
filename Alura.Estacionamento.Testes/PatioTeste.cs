@@ -91,13 +91,17 @@ namespace Alura.Estacionamento.Testes
             veiculo.Modelo = "Opala";
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
-            var veiculoAlterado = new Veiculo
-
+            var veiculoAlterado = new Veiculo();
+            veiculoAlterado.Proprietario = "Joao Lemos";
+            veiculoAlterado.Placa = "GSD-4215";
+            veiculoAlterado.Cor = "Branco"; //Alteração
+            veiculoAlterado.Modelo = "Opala";
 
             //Act
-            Veiculo alterado = estacionamento.AlteraDadosVeiculo();
+            Veiculo alterado = estacionamento.AlteraDadosVeiculo(veiculoAlterado);
+
             //Assert
-            Assert.Equal(alterado.Cor, alterado.Modelo);
+            Assert.Equal(alterado.Cor, veiculoAlterado.Cor);
         }
     }
 }
