@@ -64,7 +64,7 @@ namespace Alura.Estacionamento.Testes
             Assert.Equal("BMW", veiculo.Modelo);
         }
 
-        [Fact(DisplayName="Teste nº3",Skip = "Teste ainda nao implementado. Ignorar")]
+        [Fact(DisplayName="Teste nï¿½3",Skip = "Teste ainda nao implementado. Ignorar")]
         public void ValidaNomeProprietarioDoVeiculo()
         {
 
@@ -86,7 +86,7 @@ namespace Alura.Estacionamento.Testes
             string dados = veiculo.ToString();
 
             //Assert
-            Assert.Contains("Ficha do Veículo:", dados);
+            Assert.Contains("Ficha do Veï¿½culo:", dados);
         }
 
         public void Dispose()
@@ -120,7 +120,7 @@ namespace Alura.Estacionamento.Testes
                 
             );
 
-            Assert.Equal("O 4° caractere deve ser um hífen", mensagem.Message);
+            Assert.Equal("O 4Âº caractere deve ser um hÃ­fen", mensagem.Message);
         }
     }
 }
