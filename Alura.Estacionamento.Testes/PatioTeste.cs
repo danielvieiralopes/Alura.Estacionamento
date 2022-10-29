@@ -91,7 +91,7 @@ namespace Alura.Estacionamento.Testes
             veiculo.Modelo = "Opala";
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
-            var veiculoAlterado = new Veiculo
+            var veiculoAlterado = new Veiculo();
 
 
             //Act

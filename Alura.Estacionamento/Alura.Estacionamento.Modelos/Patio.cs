@@ -90,5 +90,10 @@ namespace Alura.Estacionamento.Modelos
                               select veiculo).SingleOrDefault();
             return encontrado;
         }
+
+        public Veiculo AlteraDadosVeiculo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
