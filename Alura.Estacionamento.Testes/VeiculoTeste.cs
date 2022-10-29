@@ -93,5 +93,34 @@ namespace Alura.Estacionamento.Testes
         {
             SaidaConsoleTeste.WriteLine("Dispose invocado.");
         }
+
+        [Fact]
+        public void TestaNomeProprietarioVeiculoComMenosDeTresCaractereres()
+        {
+            //Arrange
+            string nomeProprietario = "Ab";
+
+            //Assert
+            Assert.Throws<System.FormatException>(
+                //Act
+                () => new Veiculo(nomeProprietario)
+            );
+        }
+
+        [Fact]
+        public void TestaMensagemDeExcecaoDoQuartoCaractereDaPlaca()
+        {
+            //Arrange
+            string placa = "ASDF9999";
+
+            //Assert
+            var mensagem = Assert.Throws<System.FormatException>(
+                //Act
+                () => new Veiculo().Placa = placa
+                
+            );
+
+            Assert.Equal("O 4° caractere deve ser um hífen", mensagem.Message);
+        }
     }
 }
