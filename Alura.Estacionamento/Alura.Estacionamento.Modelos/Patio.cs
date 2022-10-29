@@ -91,9 +91,21 @@ namespace Alura.Estacionamento.Modelos
             return encontrado;
         }
 
+<<<<<<< HEAD
         public Veiculo AlteraDadosVeiculo()
         {
             throw new NotImplementedException();
+=======
+        public Veiculo AlteraDadosVeiculo(Veiculo veiculoAlterado)
+        {
+            var veiculoTemp = (from veiculo in this.Veiculos
+                               where veiculo.Placa == veiculoAlterado.Placa
+                               select veiculo).SingleOrDefault();
+
+            veiculoTemp.AlterarDados(veiculoAlterado);
+
+            return veiculoTemp;
+>>>>>>> b8e7743d8ae509977c8cb3428594e7fd68369cc0
         }
     }
 }
