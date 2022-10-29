@@ -103,14 +103,10 @@ namespace Alura.Estacionamento.Testes
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             var veiculoAlterado = new Veiculo();
-<<<<<<< HEAD
-
-=======
             veiculoAlterado.Proprietario = "Joao Lemos";
             veiculoAlterado.Placa = "GSD-4215";
             veiculoAlterado.Cor = "Branco"; //Alteração
             veiculoAlterado.Modelo = "Opala";
->>>>>>> b8e7743d8ae509977c8cb3428594e7fd68369cc0
 
             //Act
             Veiculo alterado = estacionamento.AlteraDadosVeiculo(veiculoAlterado);
