@@ -26,6 +26,7 @@ namespace Alura.Estacionamento.Testes
             veiculo.Acelerar(10);
             //Assert
             Assert.Equal(100,veiculo.VelocidadeAtual);
+            //teste
         }
 
       
